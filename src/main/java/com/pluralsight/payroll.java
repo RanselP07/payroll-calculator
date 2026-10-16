@@ -13,18 +13,17 @@ public class payroll {
         String name = scanner.nextLine();
 
         System.out.print("Enter your hours worked: ");
-        float hoursWorked = scanner.nextInt();
+        float hoursWorked = Float.parseFloat(scanner.nextLine());
 
         System.out.print("Enter pay rate: ");
-        float payRate = scanner.nextInt();
+        float payRate = Float.parseFloat(scanner.nextLine());
 
-        if (hoursWorked <= 40){
+        if (hoursWorked <= 40) {
 
             double grossPay = hoursWorked * payRate;
             System.out.println(name + " gross pay is " + grossPay);
 
-        }
-        else{
+        } else {
 
             float overtime = hoursWorked - 40;
             double grossPay = ((overtime * 1.5) + 40) * payRate;
