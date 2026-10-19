@@ -4,21 +4,23 @@ import java.util.Scanner;
 
 public class RefactorPayroll {
 
-    Scanner myScanner = new Scanner(System.in);
 
-    public static String name (String fullName){
+    public static String name(String fullName) {
         return fullName;
     }
 
-    public static float regularPay (float hourWorked, float payRate){
+    public static float regularPay(float hourWorked, float payRate) {
         return hourWorked * payRate;
     }
 
-    public static double overtimePay(float hourWorked, float payRate){
+    public static double overtimePay(float hourWorked, float payRate) {
         return (((hourWorked - 40) * 1.5) + 40) * payRate;
     }
 
-    void main(String[] args) {
+
+    static void main() {
+
+        Scanner myScanner = new Scanner(System.in);
 
         System.out.print("Enter your name: ");
         String fullName = myScanner.nextLine();
@@ -31,15 +33,16 @@ public class RefactorPayroll {
 
         System.out.println("Name: " + name(fullName));
 
-        if (hoursWorked > 40){
+        if (hoursWorked > 40) {
             System.out.println("Gross Pay: " + overtimePay(hoursWorked, payRate));
-        } else{
+        } else {
             System.out.println("Gross Pay: " + regularPay(hoursWorked, payRate));
         }
 
     }
 
     /*
+
     static Scanner myScanner = new Scanner(System.in);
 
     public static String name (){
