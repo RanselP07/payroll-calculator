@@ -17,7 +17,6 @@ public class RefactorPayroll {
         return (((hourWorked - 40) * 1.5) + 40) * payRate;
     }
 
-
     static void main() {
 
         Scanner myScanner = new Scanner(System.in);
