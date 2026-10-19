@@ -30,7 +30,5 @@ public class payroll {
             System.out.println(name + " gross pay is " + grossPay);
 
         }
-
-
     }
 }
